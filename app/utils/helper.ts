@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from "react-native"
+import { Platform } from "react-native"
 
 export const emailIsValid = (email: string): boolean =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -25,9 +25,7 @@ export const shuffle = <Type>(array: Type[]): Type[] => {
 }
 
 export const scriptHostname = (): string => {
-  const { scriptURL } = NativeModules.SourceCode
-  const scriptHostname = scriptURL?.split("://")[1].split(":")[0] ?? ""
-  return scriptHostname
+  return "xx.xx.xx.xx"
 }
 
 export const isIos = Platform.OS === "ios"
