@@ -167,12 +167,7 @@ export const WelcomePhoneInputScreen: ScreenType = ({
   // Comment it out to test captcha locally
   useEffect(() => {
     if (phoneNumber) {
-      if (appConfig.galoyInstance.name === "Local") {
-        navigation.navigate("welcomePhoneValidation", { phone: phoneNumber, setPhone })
-        setPhoneNumber("")
-      } else {
-        registerCaptcha()
-      }
+      registerCaptcha()
     }
   }, [appConfig.galoyInstance.name, navigation, phoneNumber, registerCaptcha])
 
@@ -291,7 +286,7 @@ export const WelcomePhoneInputScreen: ScreenType = ({
               textInputStyle={styles.textEntry}
               textContainerStyle={styles.textContainer}
               defaultValue={phoneNumber}
-              defaultCode="SV"
+              defaultCode="JP"
               layout="first"
               renderDropdownImage={renderDropdownImage()}
               textInputProps={{
