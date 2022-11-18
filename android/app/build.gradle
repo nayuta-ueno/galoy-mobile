@@ -79,6 +79,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
+    hermesCommand: '../../node_modules/react-native/sdks/hermesc/%OS-BIN%/hermesc',
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -301,10 +302,10 @@ dependencies {
     // implementation 'com.google.firebase:firebase-inappmessaging-display:19.0.6'
 
     if (enableHermes) {
-    //noinspection GradleDynamicVersion
-    implementation("com.facebook.react:hermes-engine:+") { // From node_modules
-        exclude group:'com.facebook.fbjni'
-    }
+        //noinspection GradleDynamicVersion
+        implementation("com.facebook.react:hermes-engine:+") { // From node_modules
+            exclude group:'com.facebook.fbjni'
+        }
     } else {
       implementation jscFlavor
     }

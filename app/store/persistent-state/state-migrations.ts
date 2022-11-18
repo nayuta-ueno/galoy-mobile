@@ -96,10 +96,10 @@ export type PersistentState = _PersistentState_3
 export const defaultPersistentState: PersistentState = {
   schemaVersion: 3,
   hasShownStableSatsWelcome: false,
-  isUsdDisabled: false,
-  galoyInstance: GALOY_INSTANCES.find((instance) => instance.name === "BBW"),
+  isUsdDisabled: true,
+  galoyInstance: GALOY_INSTANCES.find((instance) => instance.name === "Local"),
   galoyAuthToken: "",
-  isAnalyticsEnabled: true,
+  isAnalyticsEnabled: false,
   theme: defaultTheme,
 }
 
