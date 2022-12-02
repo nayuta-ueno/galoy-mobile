@@ -23,7 +23,7 @@ export const GALOY_INSTANCES: GaloyInstance[] = [
   },
   {
     name: "Local",
-    network: "regtest",
+    network: "signet",
     graphqlUri: `http://${scriptHostname()}:4002/graphql`,
     graphqlWsUri: `ws://${scriptHostname()}:4002/graphql`,
   },

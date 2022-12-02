@@ -56,6 +56,7 @@ export const GlobalErrorToast: ComponentType = () => {
 
   if (networkError.message === "Network request failed") {
     // TODO translation
+    console.info(`global-error: ${JSON.stringify(networkError)}`)
     toastShow({ message: LL.errors.network.connection() })
   }
 
